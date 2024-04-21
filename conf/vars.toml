@@ -1,0 +1,5 @@
+# Variables used by configuration
+hostName="nixos"
+timeZone="America/Los_Angeles"
+locale="en_US.UTF-8"
+touchInputEnabled=true
