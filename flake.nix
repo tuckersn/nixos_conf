@@ -15,19 +15,11 @@
     ];
   in {
     templates = {
-      minimal = {
+      desktop = {
         description = ''
-          Minimal flake - contains only the configs.
-          Contains the bare minimum to migrate your existing legacy configs to flakes.
+          Desktop flake - includes a desktop environment and applications.
         '';
-        path = ./minimal;
-      };
-      standard = {
-        description = ''
-          Standard flake - augmented with boilerplate for custom packages, overlays, and reusable modules.
-          Perfect migration path for when you want to dive a little deeper.
-        '';
-        path = ./standard;
+        path = ./desktop;
       };
     };
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
